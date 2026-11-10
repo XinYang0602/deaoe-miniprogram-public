@@ -1,0 +1,430 @@
+.mine-page {
+  background: #f5f6f8;
+  min-height: 100vh
+}
+
+.mine-page button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 26rpx;
+  line-height: 1.4;
+  text-align: left;
+  border-radius: 0;
+  background: transparent;
+  color: #26313e
+}
+
+.profile-banner {
+  background: linear-gradient(120deg, #fbefec 0%, #f3e7e5 55%, #e9edf1 100%);
+  border-radius: 0 0 50rpx 50rpx;
+  padding: 32rpx 36rpx 38rpx
+}
+
+.profile-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34rpx
+}
+
+.profile-brand .logo-crop {
+  width: 260rpx;
+  height: 30rpx;
+  mix-blend-mode: multiply;
+  background: transparent
+}
+
+.profile-brand .logo {
+  width: 283rpx;
+  height: 113rpx;
+  left: -12rpx;
+  top: -40rpx
+}
+
+.profile-brand>text {
+  font-size: 20rpx;
+  color: #917d78
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 132rpx
+}
+
+.avatar-mark {
+  width: 116rpx;
+  height: 116rpx;
+  flex-shrink: 0;
+  background: #fff9f7;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx #9e6c6210
+}
+
+.avatar-mark image {
+  width: 64rpx;
+  height: 64rpx
+}
+
+.identity-copy {
+  margin-left: 28rpx;
+  flex: 1;
+  min-width: 0
+}
+
+.identity-name {
+  font-size: 40rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  word-break: break-all
+}
+
+.chevron {
+  font-size: 44rpx;
+  margin-left: 20rpx;
+  font-weight: 400
+}
+
+.identity-hint {
+  font-size: 25rpx;
+  color: #8d7e7b;
+  margin-top: 13rpx;
+  line-height: 1.6
+}
+
+.customer-id {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-top: 22rpx;
+  font-size: 20rpx;
+  color: #9b7f78
+}
+
+.customer-id text {
+  word-break: break-all
+}
+
+/* Explicit sizing overrides WeChat style v2's default button width. */
+.mine-page .customer-id .member-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 76rpx;
+  height: 48rpx;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 18rpx;
+  font-size: 22rpx;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  color: #806334;
+  background: #fffdf6c9;
+  border: 1rpx solid #c7aa704d;
+  border-radius: 24rpx;
+}
+
+.mine-page .customer-id .member-copy-pressed {
+  background: #f1e5cc;
+}
+
+.mine-content {
+  padding: 12rpx 30rpx 30rpx
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx 0 22rpx;
+  font-size: 32rpx;
+  font-weight: 600
+}
+
+.section-head button {
+  font-size: 24rpx;
+  color: #b84a43;
+  font-weight: 400;
+  padding: 12rpx 0 12rpx 20rpx
+}
+
+.section-head button text {
+  font-size: 30rpx;
+  margin-left: 8rpx
+}
+
+.status-panel {
+  display: flex;
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 28rpx 6rpx
+}
+
+.status-panel button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24rpx;
+  padding: 4rpx 0 8rpx;
+  white-space: nowrap
+}
+
+.status-icon {
+  position: relative;
+  width: 52rpx;
+  height: 52rpx;
+  margin-bottom: 18rpx
+}
+
+.status-icon image {
+  width: 100%;
+  height: 100%
+}
+
+.count-badge {
+  position: absolute;
+  right: -16rpx;
+  top: -8rpx;
+  min-width: 25rpx;
+  height: 25rpx;
+  background: #c84039;
+  color: #fff;
+  border: 3rpx solid #fff;
+  border-radius: 20rpx;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 25rpx;
+  padding: 0 4rpx
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18rpx;
+  margin-top: 26rpx
+}
+
+.quick-grid .quick-tile {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 24rpx;
+  padding: 26rpx 20rpx;
+  min-height: 130rpx;
+  box-sizing: border-box
+}
+
+.tile-icon {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 16rpx
+}
+
+.tile-icon image {
+  width: 40rpx;
+  height: 40rpx
+}
+
+.rose {
+  background: #fbefec
+}
+
+.gray {
+  background: #eef1f4
+}
+
+.tile-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600
+}
+
+.tile-desc {
+  display: block;
+  font-size: 20rpx;
+  color: #9199a3;
+  margin-top: 9rpx;
+  line-height: 1.6
+}
+
+.mine-page .warranty-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14rpx;
+  background: linear-gradient(110deg, #f5e3de, #f1ebe9);
+  padding: 28rpx;
+  border-radius: 24rpx;
+  width: 100%;
+  box-sizing: border-box
+}
+
+.banner-title {
+  display: block;
+  color: #a4443d;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 1.5
+}
+
+.banner-desc {
+  display: block;
+  color: #a57f77;
+  font-size: 22rpx;
+  margin-top: 8rpx
+}
+
+.warranty-banner image {
+  width: 76rpx;
+  height: 76rpx;
+  flex-shrink: 0
+}
+
+.account-panel {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 4rpx 26rpx;
+  margin-top: 26rpx
+}
+
+.account-panel button {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0;
+  min-height: 88rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f0f2f4;
+  width: 100%
+}
+
+.account-panel button:last-child {
+  border-bottom: 0
+}
+
+.account-panel image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 20rpx
+}
+
+.arrow {
+  margin-left: auto;
+  color: #b4bbc4;
+  font-size: 34rpx
+}
+
+.mine-footer {
+  font-size: 20rpx;
+  color: #b0b6bf;
+  text-align: center;
+  margin-top: 32rpx
+}
+
+.retry {
+  display: block;
+  color: #ae4039;
+  padding-top: 12rpx
+}
+
+.tap-soft {
+  opacity: .8
+}
+
+/* Override the native default button width, including style v2. */
+.mine-page .identity {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0;
+}
+
+.identity-copy {
+  flex: 1;
+  width: 0;
+  min-width: 0
+}
+
+.identity-name {
+  white-space: nowrap;
+  word-break: normal;
+  font-size: 38rpx;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.identity-hint {
+  font-weight: 400;
+  font-size: 24rpx
+}
+
+.avatar-mark {
+  overflow: hidden
+}
+
+.avatar-mark .avatar-photo {
+  width: 100%;
+  height: 100%
+}
+
+.mine-page .section-head button {
+  width: auto;
+  flex-shrink: 0
+}
+
+.mine-page .quick-tile {
+  width: 100%;
+  max-width: none
+}
+
+.mine-page .status-panel button {
+  width: 0;
+  min-width: 0
+}
+
+.customer-id {
+  margin-top: 30rpx;
+  padding: 24rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(115deg, #faf5e9 0%, #f2e6cb 36%, #fffdf7 62%, #f5eddc 100%);
+  border: 1rpx solid #d5bd8559;
+  box-shadow: inset 0 2rpx 0 #ffffffcc, 0 4rpx 14rpx #a58a4b08;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.member-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.member-label {
+  font-size: 23rpx;
+  color: #85704c;
+  margin-bottom: 8rpx;
+}
+
+.member-number {
+  font-size: 34rpx;
+  font-weight: 600;
+  letter-spacing: 1rpx;
+  color: #786039;
+  text-shadow: 0 1rpx 0 #ffffffcc;
+  word-break: break-all;
+}

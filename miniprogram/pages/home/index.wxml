@@ -1,0 +1,42 @@
+<view class="page service-page">
+  <view class="brand-wrap">
+    <view class="logo-crop">
+      <image
+        class="logo"
+        src="/assets/logo.png"
+      />
+    </view>
+    <view class="small">德澳智慧家 · 客户服务</view>
+  </view>
+  <view class="service-hero">
+    <view class="service-heading">扫描机身码，识别设备</view>
+    <view class="service-subtitle">安装完成后，使用顾客手机扫描机身二维码</view>
+    <button bindtap="scan" disabled="{{scanning}}" loading="{{scanning}}">扫一扫机身码 <text>›</text></button>
+    <view class="registration-note">相机扫码识别，设备登记与保修开通请联系购机门店</view>
+  </view>
+  <view class="section">需要什么帮助？</view>
+  <view class="service-actions">
+    <button
+      bindtap="request"
+      data-type="安装"
+    >
+      <image src="/assets/ui/calendar.png" /><text>预约安装</text>
+      <view>提交安装需求</view>
+    </button>
+    <button
+      bindtap="request"
+      data-type="维修"
+    >
+      <image src="/assets/ui/tool-red.png" /><text>售后报修</text>
+      <view>及时解决使用问题</view>
+    </button>
+  </view>
+  <button class="website-link" bindtap="website" hover-class="website-pressed">
+    <view>
+      <view class="website-title">探索德澳官网</view>
+      <view class="website-subtitle">了解品牌 · 发现更多厨卫产品</view>
+    </view>
+    <text class="website-arrow">›</text>
+  </button>
+  <view class="foot">DEAOE 德澳 · 服务每一个家</view>
+</view>

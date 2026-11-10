@@ -1,0 +1,92 @@
+<view class="page">
+  <view class="demo">提交后生成服务工单。期望日期需由客服确认，并非已预约成功。</view>
+  <view class="heading">申请售后服务</view>
+  <view class="muted">填写服务信息，客服将按你提供的联系方式跟进。</view>
+  <form bindsubmit="submit">
+    <view
+      class="card"
+      style="margin-top:28rpx"
+    >
+      <view class="label">服务设备</view>
+      <picker
+        range="{{devices}}"
+        range-key="name"
+        value="{{deviceIndex}}"
+        bindchange="chooseDevice"
+      >
+        <view class="picker">{{devices.length ? devices[deviceIndex].name : '暂无可选设备'}}　⌄</view>
+      </picker>
+      <view class="label">服务类型</view>
+      <picker
+        range="{{types}}"
+        value="{{typeIndex}}"
+        bindchange="chooseType"
+      >
+        <view class="picker">{{types[typeIndex]}}　⌄</view>
+      </picker>
+      <view class="label">联系人</view>
+      <input
+        name="name"
+        maxlength="30"
+        placeholder="请填写联系人姓名"
+      />
+      <view class="label">联系电话</view>
+      <input
+        name="phone"
+        type="number"
+        maxlength="11"
+        placeholder="请输入联系电话"
+      />
+      <view class="label">服务地址</view>
+      <input
+        name="address"
+        maxlength="150"
+        placeholder="省市区、街道及门牌号"
+      />
+      <view class="label">期望上门日期</view>
+      <picker
+        mode="date"
+        value="{{date}}"
+        start="{{today}}"
+        bindchange="chooseDate"
+      >
+        <view class="picker">{{date}}　⌄</view>
+      </picker>
+      <view class="label">需求描述</view>
+      <textarea
+        name="description"
+        maxlength="500"
+        placeholder="请描述故障现象或安装需求，至少 5 个字"
+      />
+    </view>
+    <navigator
+      class="link"
+      url="/pages/privacy/index"
+    >查看服务与信息使用说明 →</navigator>
+    <checkbox-group bindchange="agree">
+      <label class="agreement">
+        <checkbox
+          value="yes"
+          checked="{{agreed}}"
+          color="#c84039"
+        /><text>我确认信息准确，同意将联系人、电话、地址和需求提交给德澳用于本次售后服务。</text>
+      </label>
+    </checkbox-group>
+    <view
+      wx:if="{{error}}"
+      class="error"
+    >{{error}}
+      <navigator
+        url="/pages/my/index"
+        open-type="switchTab"
+        class="link"
+      >前往我的登录 →</navigator>
+    </view>
+    <button
+      class="primary"
+      form-type="submit"
+      loading="{{submitting}}"
+      disabled="{{submitting || !devices.length}}"
+    >提交服务申请</button>
+  </form>
+</view>

@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="demo">服务申请已记录，进度以客服更新为准。</view>
+  <view
+    wx:if="{{error}}"
+    class="error"
+  >{{error}}
+    <navigator
+      url="/pages/my/index"
+      open-type="switchTab"
+      class="link"
+    >前往我的登录 →</navigator>
+  </view>
+  <block wx:if="{{order}}">
+    <view class="hero">
+      <view class="muted">{{order.type}}服务</view>
+      <view class="heading">{{order.status}}</view>
+      <view class="muted">{{order.product}}</view>
+    </view>
+    <view class="section">申请信息</view>
+    <view class="card">
+      <view class="line"><text>申请编号</text><text>{{order.id}}</text></view>
+      <view class="line"><text>机身编号</text><text>{{order.sn}}</text></view>
+      <view class="line"><text>联系人</text><text>{{order.name}}</text></view>
+      <view class="line"><text>电话</text><text>{{order.phone}}</text></view>
+      <view class="line"><text>预约日期</text><text>{{order.date}}</text></view>
+      <view class="line"><text>地址</text><text>{{order.address}}</text></view>
+      <view class="label">需求描述</view>
+      <view>{{order.description}}</view>
+    </view>
+    <view class="section">处理进度</view>
+    <view class="card">
+      <view class="timeline">
+        <view
+          class="event"
+          wx:for="{{order.events}}"
+          wx:key="title"
+        >
+          <view>{{item.title}}</view>
+          <view class="small">{{item.detail}}</view>
+          <view class="small">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <button
+    class="outline"
+    bindtap="records"
+  >返回服务记录</button>
+</view>

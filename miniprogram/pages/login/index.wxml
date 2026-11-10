@@ -1,0 +1,131 @@
+<page-meta page-style="{{welcomeVisible ? 'overflow: hidden;' : ''}}" />
+<view class="login-page">
+  <view class="brand">
+    <view class="logo-crop">
+      <image
+        class="logo"
+        src="/assets/logo.png"
+      />
+    </view><text>好产品，长久相伴。</text>
+  </view>
+  <view wx:if="{{!user}}">
+    <view class="welcome">欢迎使用德澳服务</view>
+    <view class="subtitle">登录后查看设备、保修卡与服务进度</view>
+    <button
+      wx:if="{{agreed}}"
+      class="main"
+      open-type="getPhoneNumber"
+      bindgetphonenumber="phone"
+      loading="{{busy}}"
+      disabled="{{busy}}"
+    >手机号快捷登录</button>
+    <button
+      wx:else
+      class="main"
+      bindtap="phoneConsent"
+    >手机号快捷登录</button>
+    <button
+      class="secondary"
+      bindtap="login"
+      loading="{{busy}}"
+      disabled="{{busy}}"
+    >登录/注册</button>
+    <view class="agreement-row">
+      <checkbox-group
+        bindchange="agree"
+        class="agreement-check"
+      >
+        <label>
+          <checkbox
+            value="yes"
+            checked="{{agreed}}"
+            color="#c84039"
+            aria-label="同意协议"
+          />
+        </label>
+      </checkbox-group>
+      <view class="agreement-copy">
+        我已阅读并同意<text class="agreement-link" bindtap="privacy" data-doc="service">《用户服务协议》</text>、<text class="agreement-link" bindtap="privacy" data-doc="privacy">《隐私保护说明》</text>和<text class="agreement-link" bindtap="privacy" data-doc="sharing">《第三方信息共享说明》</text>
+      </view>
+    </view>
+  </view>
+  <view
+    wx:else
+    class="profile"
+  >
+    <view class="welcome">{{editingAvatar ? '修改头像' : (user.avatar ? '个人头像' : '设置你的头像')}}</view>
+    <view class="subtitle">{{editingAvatar ? '点击头像更换，保存后即可返回' : '点击选择头像，也可以稍后再设置'}}</view>
+    <button
+      class="avatar"
+      open-type="chooseAvatar"
+      bindchooseavatar="chooseAvatar"
+      disabled="{{busy}}"
+    >
+      <image
+        mode="aspectFill"
+        src="{{user.avatar || '/assets/ui/default-avatar.jpg'}}"
+      />
+    </button>
+    <block wx:if="{{!editingAvatar}}">
+      <view class="phone-status">{{user.phone ? '手机号已绑定' : '尚未绑定手机号'}}</view>
+      <view class="agreement-row">
+        <checkbox-group
+          bindchange="agree"
+          class="agreement-check"
+        >
+          <label>
+            <checkbox
+              value="yes"
+              checked="{{agreed}}"
+              color="#c84039"
+              aria-label="同意协议"
+            />
+          </label>
+        </checkbox-group>
+        <view class="agreement-copy">
+          我已阅读并同意<text class="agreement-link" bindtap="privacy" data-doc="service">《用户服务协议》</text>、<text class="agreement-link" bindtap="privacy" data-doc="privacy">《隐私保护说明》</text>和<text class="agreement-link" bindtap="privacy" data-doc="sharing">《第三方信息共享说明》</text>
+        </view>
+      </view>
+      <button
+        wx:if="{{agreed}}"
+        class="secondary"
+        open-type="getPhoneNumber"
+        bindgetphonenumber="phone"
+        disabled="{{busy}}"
+      >{{user.phone ? '更换绑定手机号' : '授权绑定微信手机号'}}</button>
+      <button
+        wx:else
+        class="secondary"
+        bindtap="phoneConsent"
+      >授权绑定微信手机号</button>
+    </block>
+    <button
+      class="main"
+      bindtap="done"
+      disabled="{{busy}}"
+    >{{editingAvatar ? '返回我的' : (user.avatar ? '完成' : '稍后设置，进入我的')}}</button>
+  </view>
+  <view
+    wx:if="{{error}}"
+    class="error"
+  >{{error}}</view>
+  <view class="footer">DEAOE 德澳 · 客户服务中心</view>
+</view>
+
+<view wx:if="{{welcomeVisible}}" class="member-welcome-mask" catchtouchmove="preventWelcomeScroll">
+  <view class="member-welcome-dialog" role="dialog" aria-modal="true" aria-label="{{welcomeTitle}}">
+    <view class="welcome-sparkles" aria-hidden="true">
+      <view wx:for="{{welcomeParticles}}" wx:key="id" class="welcome-sparkle" style="left:{{item.left}}%;top:{{item.top}}rpx;animation-delay:{{item.delay}}ms;" />
+    </view>
+    <view class="welcome-gold-rule" />
+    <view class="welcome-dialog-title">{{welcomeTitle}}</view>
+    <view class="welcome-dialog-note">{{welcomeNote}}</view>
+    <view class="welcome-member-card">
+      <view class="welcome-member-label">专属会员号</view>
+      <view class="welcome-member-number">{{welcomeMemberNo}}</view>
+      <view class="welcome-member-caption">德澳会员 · 用心服务每一天</view>
+    </view>
+    <view class="welcome-dialog-message">好产品，长久相伴。</view>
+    <button class="welcome-dialog-button" bindtap="closeWelcome" hover-class="welcome-dialog-button-pressed">{{welcomeButton}}</button>
+  </view>
+</view>

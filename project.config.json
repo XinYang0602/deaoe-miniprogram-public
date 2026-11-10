@@ -1,0 +1,30 @@
+{
+  "appid": "touristappid",
+  "projectname": "deaoe-miniprogram-public",
+  "description": "DEAOE customer service mini program \u2014 public source edition",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "srcMiniprogramRoot": "miniprogram/",
+  "libVersion": "3.18.0",
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

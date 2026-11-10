@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="heading">服务记录</view>
+  <view class="muted">查看每次申请的内容和处理进度。</view>
+  <view
+    wx:if="{{error}}"
+    class="error"
+  >{{error}}
+    <navigator
+      url="/pages/my/index"
+      open-type="switchTab"
+      class="link"
+    >前往我的登录 →</navigator>
+  </view>
+  <view class="chips">
+    <view
+      wx:for="{{filters}}"
+      wx:key="*this"
+      class="chip {{filter === item ? 'active' : ''}}"
+      data-filter="{{item}}"
+      bindtap="filter"
+    >{{item}}</view>
+  </view>
+  <view
+    wx:if="{{loading}}"
+    class="empty"
+  >正在读取…</view>
+  <view
+    wx:for="{{visible}}"
+    wx:key="id"
+    class="card"
+    data-id="{{item.id}}"
+    bindtap="open"
+  >
+    <view class="row">
+      <text class="title">{{item.product}}</text><text class="tag">{{item.status}}</text></view>
+    <view class="small">{{item.type}} · 预约 {{item.date}}</view>
+    <view class="line"><text>需求</text><text>{{item.description}}</text></view>
+    <view class="link">查看申请详情 →</view>
+  </view>
+  <view
+    wx:if="{{!loading && !visible.length && !error}}"
+    class="empty"
+  >当前分类暂无服务申请
+    <br />需要帮助时，可以发起安装或维修申请。
+  </view>
+  <button
+    class="primary"
+    bindtap="request"
+  >新增服务申请</button>
+</view>

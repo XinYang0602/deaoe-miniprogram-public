@@ -1,0 +1,113 @@
+.service-hero {
+  background: #293440;
+  border-radius: 28rpx;
+  padding: 26rpx 30rpx;
+  color: white
+}
+
+.service-heading {
+  font-size: 38rpx;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 10rpx
+}
+
+.service-subtitle {
+  color: #b5bec9;
+  font-size: 22rpx;
+  line-height: 1.5
+}
+
+.service-hero button {
+  background: #c84039;
+  color: #fff;
+  text-align: left;
+  padding: 0 26rpx;
+  font-size: 25rpx;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 28rpx;
+  margin: 18rpx 0 0;
+  line-height: 60rpx
+}
+
+.service-hero button text {
+  font-size: 30rpx
+}
+
+.service-actions {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 24rpx
+}
+
+.service-actions button {
+  flex: 1;
+  background: #fff;
+  border-radius: 22rpx;
+  text-align: left;
+  padding: 28rpx;
+  margin: 0;
+  line-height: 1.5
+}
+
+.service-actions image {
+  display: block;
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 17rpx
+}
+
+.service-actions text {
+  font-size: 29rpx;
+  font-weight: 600
+}
+
+.service-actions view {
+  font-size: 22rpx;
+  color: #969faa;
+  margin-top: 8rpx
+}
+
+.service-page .website-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 24rpx 0 0;
+  padding: 28rpx 32rpx;
+  border-radius: 22rpx;
+  background: #f3e7e3;
+  text-align: left;
+  line-height: 1.5;
+  color: #a64038;
+}
+
+.website-title {
+  font-size: 29rpx;
+  font-weight: 600;
+}
+
+.website-subtitle {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #927c77;
+}
+
+.website-arrow {
+  font-size: 38rpx;
+  margin-left: 20rpx;
+}
+
+.service-page .website-pressed {
+  background: #ecd9d3;
+}
+
+.registration-note {
+  margin-top: 14rpx;
+  font-size: 20rpx;
+  line-height: 1.5;
+  color: #b5bec9;
+}

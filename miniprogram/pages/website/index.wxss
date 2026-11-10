@@ -1,0 +1,17 @@
+.website-error {
+  padding: 100rpx 40rpx;
+  text-align: center;
+  color: #293440;
+}
+
+.hint {
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #87909b;
+}
+
+.website-error button {
+  width: 280rpx;
+  background: #c84039;
+  color: #fff;
+}

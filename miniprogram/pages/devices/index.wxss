@@ -1,0 +1,102 @@
+.devices-page .heading {
+  margin-top: 0;
+  line-height: 1.3
+}
+
+.register-card {
+  margin-top: 30rpx;
+  background: #fff;
+  border-radius: 28rpx;
+  padding: 34rpx;
+  text-align: center
+}
+
+.scan-symbol {
+  display: block;
+  width: 64rpx;
+  height: 64rpx;
+  margin: 6rpx auto 24rpx
+}
+
+.register-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin: 14rpx 0
+}
+
+.register-copy {
+  color: #737d88;
+  font-size: 25rpx;
+  line-height: 1.8
+}
+
+.devices-page .scan-button {
+  width: 100%;
+  max-width: none;
+  border-radius: 50rpx;
+  font-size: 29rpx;
+  font-weight: 500
+}
+
+.pending-note {
+  font-size: 22rpx;
+  color: #8b6b62;
+  line-height: 1.7;
+  margin-top: 22rpx
+}
+
+.steps-card {
+  background: #f8eeeb;
+  padding: 28rpx;
+  border-radius: 22rpx;
+  margin-top: 24rpx
+}
+
+.steps-title {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #9d4d45
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rpx;
+  font-size: 23rpx;
+  line-height: 1.8;
+  margin-top: 14rpx;
+  color: #806d69
+}
+
+.device-count {
+  font-size: 24rpx;
+  color: #929ba5;
+  margin-left: 12rpx
+}
+
+.steps text {
+  white-space: nowrap;
+}
+
+.step-arrow {
+  color: #a3857e;
+  font-size: 28rpx;
+}
+
+.binding-note {
+  margin-top: 16rpx;
+  font-size: 23rpx;
+  line-height: 1.7;
+  color: #806d69;
+}
+
+.devices-page .empty {
+  padding: 44rpx 10rpx;
+}
+
+.empty-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #737d88;
+}

@@ -1,0 +1,265 @@
+page {
+  background: #f5f6f8;
+  color: #26313e;
+  font-family: -apple-system, "PingFang SC", sans-serif;
+  font-size: 28rpx
+}
+
+.page {
+  padding: 32rpx;
+  padding-bottom: 60rpx
+}
+
+.demo {
+  font-size: 23rpx;
+  color: #94754d;
+  background: #fff6e8;
+  padding: 18rpx 24rpx;
+  border-radius: 12rpx;
+  margin-bottom: 28rpx;
+  line-height: 1.7
+}
+
+.heading {
+  font-size: 42rpx;
+  font-weight: 600;
+  margin: 30rpx 0 12rpx
+}
+
+.muted {
+  font-size: 25rpx;
+  color: #89929d;
+  line-height: 1.8
+}
+
+.section {
+  font-size: 31rpx;
+  font-weight: 600;
+  margin: 34rpx 0 22rpx
+}
+
+.card {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 24rpx
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx
+}
+
+.title {
+  font-size: 31rpx;
+  font-weight: 600
+}
+
+.small {
+  font-size: 24rpx;
+  color: #8c95a0;
+  margin-top: 12rpx;
+  line-height: 1.7
+}
+
+.tag {
+  color: #a25246;
+  background: #fbefec;
+  border-radius: 8rpx;
+  padding: 8rpx 15rpx;
+  font-size: 22rpx;
+  white-space: nowrap
+}
+
+.hero {
+  background: #293440;
+  color: white;
+  border-radius: 24rpx;
+  padding: 38rpx;
+  margin-top: 24rpx
+}
+
+.hero .muted {
+  color: #bac3cc
+}
+
+.hero .heading {
+  font-size: 44rpx;
+  margin-top: 12rpx
+}
+
+.primary {
+  background: #c84039 !important;
+  color: white !important
+}
+
+.button,
+button {
+  font-size: 28rpx;
+  border-radius: 12rpx;
+  margin-top: 26rpx;
+  line-height: 88rpx;
+  background: #fff;
+  color: #4b5664
+}
+
+button::after {
+  border: 0
+}
+
+.outline {
+  border: 1rpx solid #e5e8ec
+}
+
+.line {
+  border-bottom: 1rpx solid #edf0f3;
+  padding: 24rpx 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24rpx;
+  font-size: 26rpx
+}
+
+.line text:first-child {
+  color: #929ba5;
+  flex-shrink: 0
+}
+
+.line text:last-child {
+  text-align: right;
+  word-break: break-all
+}
+
+.label {
+  font-size: 26rpx;
+  color: #596674;
+  margin: 24rpx 0 14rpx
+}
+
+input,
+.picker,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background: #f6f7f9;
+  border-radius: 10rpx;
+  padding: 23rpx;
+  font-size: 28rpx;
+  min-height: 82rpx
+}
+
+textarea {
+  height: 210rpx;
+  line-height: 1.6
+}
+
+.empty {
+  text-align: center;
+  color: #89929d;
+  padding: 60rpx 10rpx;
+  line-height: 1.9
+}
+
+.error {
+  color: #b44639;
+  background: #fff0ed;
+  padding: 22rpx;
+  border-radius: 10rpx;
+  line-height: 1.7;
+  margin: 20rpx 0
+}
+
+.timeline {
+  margin-top: 25rpx;
+  border-left: 3rpx solid #ead6d2;
+  padding-left: 25rpx
+}
+
+.event {
+  padding-bottom: 30rpx;
+  font-size: 26rpx;
+  line-height: 1.8
+}
+
+.logo-crop {
+  position: relative;
+  overflow: hidden;
+  width: 380rpx;
+  height: 44rpx;
+  background: #fff
+}
+
+.logo {
+  position: absolute;
+  width: 414rpx;
+  height: 166rpx;
+  left: -17.5rpx;
+  top: -58.5rpx
+}
+
+.brand-wrap {
+  background: #fff;
+  margin: -32rpx -32rpx 28rpx;
+  padding: 32rpx
+}
+
+.foot {
+  text-align: center;
+  font-size: 22rpx;
+  color: #a3aab3;
+  margin-top: 45rpx
+}
+
+.chips {
+  display: flex;
+  gap: 16rpx;
+  margin: 22rpx 0
+}
+
+.chip {
+  background: white;
+  border: 1rpx solid #e6e9ed;
+  border-radius: 10rpx;
+  padding: 16rpx 30rpx;
+  font-size: 25rpx
+}
+
+.chip.active {
+  background: #f8eae7;
+  color: #b6483f;
+  border-color: #e8bcb6
+}
+
+.link {
+  color: #b04c43;
+  font-size: 25rpx;
+  padding: 16rpx 0
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32rpx;
+  padding-top: 25rpx;
+  border-top: 1rpx solid #46515d
+}
+
+.number {
+  font-size: 40rpx;
+  font-weight: 600
+}
+
+.agreement {
+  display: flex;
+  align-items: flex-start;
+  font-size: 24rpx;
+  color: #7e8894;
+  line-height: 1.8;
+  margin: 28rpx 0
+}
+
+.agreement checkbox {
+  transform: scale(.8)
+}

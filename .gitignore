@@ -1,0 +1,27 @@
+project.private.config.json
+.DS_Store
+node_modules/
+
+# Local/generated/runtime data must never enter source control.
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.zip
+*.tar.gz
+*.sqlite*
+*.db
+*.db-*
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+wechat.json
+account.json
+project.private.config.json
+uploads/
+*.xlsx

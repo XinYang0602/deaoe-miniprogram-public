@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/devices/index",
+    "pages/orders/index",
+    "pages/card/index",
+    "pages/request/index",
+    "pages/order/index",
+    "pages/privacy/index",
+    "pages/my/index",
+    "pages/login/index",
+    "pages/website/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "德澳服务",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f6f8"
+  },
+  "tabBar": {
+    "color": "#87909b",
+    "selectedColor": "#c84039",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "服务",
+        "iconPath": "assets/ui/home.png",
+        "selectedIconPath": "assets/ui/home-red.png"
+      },
+      {
+        "pagePath": "pages/devices/index",
+        "text": "我的设备",
+        "iconPath": "assets/ui/device.png",
+        "selectedIconPath": "assets/ui/device-red.png"
+      },
+      {
+        "pagePath": "pages/orders/index",
+        "text": "服务记录",
+        "iconPath": "assets/ui/record.png",
+        "selectedIconPath": "assets/ui/record-red.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "assets/ui/user.png",
+        "selectedIconPath": "assets/ui/user-red.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

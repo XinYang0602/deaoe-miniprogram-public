@@ -1,0 +1,69 @@
+<view class="mine-page">
+  <view class="profile-banner">
+    <view class="profile-brand">
+      <view class="logo-crop">
+        <image
+          class="logo"
+          src="/assets/logo.png"
+        />
+      </view><text>客户服务中心</text>
+    </view>
+    <button
+      class="identity"
+      bindtap="openLogin"
+      hover-class="tap-soft"
+    >
+      <view class="avatar-mark">
+        <image
+          src="{{user.avatar || '/assets/ui/default-avatar.jpg'}}"
+          mode="aspectFill"
+          class="avatar-photo"
+        />
+      </view>
+      <view class="identity-copy">
+        <view class="identity-name">
+          {{user ? displayName : '登录/注册'}}<text wx:if="{{!user}}" class="chevron">›</text>
+        </view>
+        <view wx:if="{{!user}}" class="identity-hint">登录后查看设备与保修服务
+        </view>
+      </view>
+    </button>
+    <view
+      wx:if="{{user}}"
+      class="customer-id"
+    >
+      <view class="member-details">
+        <view class="member-label">德澳会员号</view>
+        <view class="member-number">{{user.memberNo || user.id}}</view>
+      </view>
+      <button class="member-copy" hover-class="member-copy-pressed" bindtap="copy" aria-label="复制会员号">复制</button>
+    </view>
+  </view>
+  <view class="mine-content">
+    <view
+      wx:if="{{error}}"
+      class="error"
+    >{{error}}<text class="retry" bindtap="refresh">重新加载</text></view>
+    <view class="section-head"><text>账号与帮助</text></view>
+    <view class="account-panel">
+      <button bindtap="openLogin">
+        <image src="/assets/ui/user.png" /><text>{{user ? '修改头像' : '登录/注册'}}</text><text class="arrow">›</text>
+      </button>
+      <button bindtap="binding">
+        <image src="/assets/ui/card.png" /><text>设备登记与保修指引</text><text class="arrow">›</text>
+      </button>
+      <button bindtap="privacy">
+        <image src="/assets/ui/record.png" /><text>服务与信息使用说明</text><text class="arrow">›</text>
+      </button>
+      <button
+        wx:if="{{user}}"
+        bindtap="logout"
+        disabled="{{logging}}"
+      >
+        <image src="/assets/ui/user.png" /><text>退出登录</text><text class="arrow">›</text>
+      </button>
+    </view>
+    <view class="mine-footer">DEAOE 德澳 · 好产品，长久相伴</view>
+  </view>
+
+</view>

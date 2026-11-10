@@ -1,0 +1,224 @@
+.login-page {
+  padding: 70rpx 48rpx;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #f5f6f8
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 55rpx 0 80rpx
+}
+
+.brand .logo-crop {
+  background: transparent;
+  mix-blend-mode: multiply
+}
+
+.brand>text {
+  font-size: 23rpx;
+  letter-spacing: 6rpx;
+  color: #8e959f;
+  margin-top: 30rpx
+}
+
+.welcome {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 600
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 24rpx;
+  color: #9199a3;
+  line-height: 1.7;
+  margin-top: 18rpx
+}
+
+.login-page button {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: none;
+  font-weight: 400
+}
+
+.login-page .main {
+  background: #c84039;
+  color: #fff;
+  border-radius: 60rpx;
+  line-height: 94rpx;
+  margin-top: 55rpx;
+  font-size: 29rpx
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #89929d;
+  font-size: 24rpx;
+  margin-top: 35rpx
+}
+
+.consent checkbox {
+  transform: scale(.8)
+}
+
+.login-page .terms {
+  background: transparent;
+  color: #b34740;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  margin-top: 0;
+  padding: 0
+}
+
+.login-page .avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border: 6rpx solid white;
+  border-radius: 50%;
+  padding: 0;
+  margin: 42rpx auto 16rpx;
+  overflow: hidden;
+  background: #fbefec
+}
+
+.avatar image {
+  width: 100%;
+  height: 100%;
+  display: block
+}
+
+.footer {
+  margin-top: 100rpx;
+  text-align: center;
+  color: #b2b8c0;
+  font-size: 21rpx
+}
+
+.login-page .secondary {
+  background: white;
+  color: #c84039;
+  border: 1rpx solid #c84039;
+  border-radius: 60rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  margin-top: 24rpx
+}
+
+.phone-status {
+  text-align: center;
+  margin-top: 30rpx;
+  color: #707b88;
+  font-size: 25rpx
+}
+
+.agreement-row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 34rpx;
+  gap: 12rpx;
+  text-align: left
+}
+
+.agreement-check {
+  flex: none;
+  width: 42rpx;
+  padding-top: 4rpx
+}
+
+.agreement-check checkbox {
+  transform: scale(.78);
+  transform-origin: left top;
+  margin: 0
+}
+
+.agreement-copy {
+  flex: 1;
+  min-width: 0;
+  font-size: 24rpx;
+  line-height: 1.9;
+  color: #858c96;
+  font-weight: 400;
+  word-break: normal;
+  overflow-wrap: break-word
+}
+
+.agreement-link {
+  color: #bd443d
+}
+
+/* Keep the profile actions compact without changing the guest login buttons. */
+.login-page .profile .main,
+.login-page .profile .secondary {
+  width: 90%;
+  height: 80rpx;
+  padding: 0 24rpx;
+  line-height: 78rpx;
+  font-size: 26rpx;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.login-page .profile .main {
+  margin-top: 28rpx
+}
+
+/* Champagne welcome: one brief, sparse celebration, no continuous animation. */
+.member-welcome-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32rpx;
+  background: rgba(29, 25, 19, .48);
+  box-sizing: border-box;
+}
+.member-welcome-dialog {
+  position: relative;
+  width: 620rpx;
+  max-width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 52rpx 40rpx 36rpx;
+  border: 1rpx solid #e7d6b3;
+  border-radius: 32rpx;
+  background: linear-gradient(145deg, #fffdf8, #ffffff 60%, #faf4e8);
+  box-shadow: 0 24rpx 80rpx #20180726;
+  text-align: center;
+  animation: welcome-card-enter .28s ease-out both;
+}
+.welcome-gold-rule { width: 44rpx; height: 4rpx; margin: 0 auto 28rpx; background: #b59a64; border-radius: 4rpx; }
+.welcome-dialog-title { position: relative; color: #252525; font-size: 38rpx; font-weight: 600; line-height: 1.5; }
+.welcome-dialog-note { position: relative; margin-top: 12rpx; color: #707070; font-size: 24rpx; line-height: 1.7; }
+.welcome-member-card {
+  position: relative;
+  margin-top: 36rpx;
+  padding: 28rpx 12rpx;
+  border: 1rpx solid #d5bd8559;
+  border-radius: 20rpx;
+  background: linear-gradient(115deg, #faf5e9, #f2e6cb 36%, #fffdf7 62%, #f5eddc);
+  box-shadow: inset 0 2rpx 0 #ffffffcc;
+}
+.welcome-member-label { color: #666666; font-size: 23rpx; line-height: 1.5; }
+.welcome-member-number { margin: 12rpx 0; color: #786039; font-size: 40rpx; line-height: 1.4; font-weight: 600; letter-spacing: 1rpx; white-space: nowrap; }
+.welcome-member-caption { color: #666666; font-size: 21rpx; line-height: 1.6; }
+.welcome-dialog-message { margin: 28rpx 0; color: #707070; font-size: 24rpx; line-height: 1.6; }
+.welcome-dialog-button { width: 100%; margin: 0; padding: 0 20rpx; border-radius: 16rpx; background: linear-gradient(110deg, #9a7a43, #80602e); color: #fffdf7; font-size: 28rpx; font-weight: 500; line-height: 88rpx; }
+.welcome-dialog-button::after { border: none; }
+.welcome-dialog-button-pressed { opacity: .86; }
+.welcome-sparkles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; border-radius: 32rpx; }
+.welcome-sparkle { position: absolute; width: 5rpx; height: 9rpx; border-radius: 2rpx; background: #c3a15e; opacity: 0; animation: welcome-gold-fall 2.3s ease-out both; }
+.welcome-sparkle:nth-child(3n) { width: 4rpx; height: 4rpx; border-radius: 50%; background: #dfc58d; }
+@keyframes welcome-gold-fall { 0% { opacity: 0; transform: translate3d(-8rpx, -12rpx, 0) rotate(0); } 15% { opacity: .65; } 75% { opacity: .35; } 100% { opacity: 0; transform: translate3d(16rpx, 210rpx, 0) rotate(150deg); } }
+@keyframes welcome-card-enter { from { opacity: 0; transform: translateY(12rpx); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .member-welcome-dialog { animation: none; } .welcome-sparkles { display: none; } }

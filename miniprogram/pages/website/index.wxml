@@ -1,0 +1,6 @@
+<web-view wx:if="{{!failed}}" src="https://example.com/" binderror="loadError" />
+<view wx:else class="website-error">
+  <view>官网暂时无法打开</view>
+  <view class="hint">请检查网络后重试</view>
+  <button bindtap="retry">重新加载</button>
+</view>

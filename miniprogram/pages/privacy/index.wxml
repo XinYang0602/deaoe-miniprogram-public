@@ -1,0 +1,12 @@
+<view class="page">
+  <view class="heading">{{doc.title}}</view>
+  <view class="card">
+    <view
+      wx:for="{{doc.sections}}"
+      wx:key="*this"
+    >
+      <view class="section">{{item[0]}}</view>
+      <view class="muted">{{item[1]}}</view>
+    </view>
+  </view>
+</view>
