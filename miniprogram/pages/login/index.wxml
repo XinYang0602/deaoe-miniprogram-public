@@ -68,24 +68,6 @@
     </button>
     <block wx:if="{{!editingAvatar}}">
       <view class="phone-status">{{user.phone ? '手机号已绑定' : '尚未绑定手机号'}}</view>
-      <view class="agreement-row">
-        <checkbox-group
-          bindchange="agree"
-          class="agreement-check"
-        >
-          <label>
-            <checkbox
-              value="yes"
-              checked="{{agreed}}"
-              color="#c84039"
-              aria-label="同意协议"
-            />
-          </label>
-        </checkbox-group>
-        <view class="agreement-copy">
-          我已阅读并同意<text class="agreement-link" bindtap="privacy" data-doc="service">《用户服务协议》</text>、<text class="agreement-link" bindtap="privacy" data-doc="privacy">《隐私保护说明》</text>和<text class="agreement-link" bindtap="privacy" data-doc="sharing">《第三方信息共享说明》</text>
-        </view>
-      </view>
       <button
         wx:if="{{agreed}}"
         class="secondary"

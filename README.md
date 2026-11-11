@@ -68,3 +68,5 @@ DEAOE logos and mascot assets are included to document the original interface. N
 
 - Preloaded member profiles before tab navigation and improved welcome-particle rendering.
 - The brief welcome sparkles play once in both system motion modes; card entry animation is disabled with reduced motion.
+
+- Removed the duplicate agreement checkbox from post-login avatar setup.

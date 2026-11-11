@@ -2,6 +2,8 @@
 
 ## 2026-11-11
 
+- Removed repeated agreement UI after successful login while retaining pre-login consent and native phone authorization. All four regression suites passed.
+
 - Preload member details before returning to the My tab; refresh cached profiles in the background and guard against stale page responses.
 - Use explicit welcome-particle bounds and delay the single celebration until after card entry.
 - Keep the brief sparkles visible in both motion preference modes; the card entrance still respects reduced motion.
