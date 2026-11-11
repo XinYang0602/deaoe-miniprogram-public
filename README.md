@@ -43,6 +43,7 @@ No npm dependencies are required. With Node.js installed:
 node tests/basic.cjs
 node tests/camera-scan.cjs
 node tests/welcome.cjs
+node tests/profile-preload.cjs
 ```
 
 Tests use mocked APIs and synthetic data; they do not prove live backend integration or WeChat review approval. If you change example configuration, adjust the corresponding fixture assertions.
@@ -62,3 +63,8 @@ DEAOE logos and mascot assets are included to document the original interface. N
 ### 2026-11-10
 
 - Published the initial sanitized client source edition with English documentation.
+
+### 2026-11-11
+
+- Preloaded member profiles before tab navigation and improved welcome-particle rendering.
+- The brief welcome sparkles play once in both system motion modes; card entry animation is disabled with reduced motion.

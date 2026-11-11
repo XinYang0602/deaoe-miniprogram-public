@@ -7,6 +7,20 @@ Page({
     error: '',
     displayName: ''
   },
+  onLoad() {
+    const user = api.cachedUser();
+    if (user) this.preloadUser(user);
+  },
+  preloadUser(user, ready) {
+    this._refreshId = (this._refreshId || 0) + 1;
+    const phone = user.phone || '';
+    this.setData({
+      user,
+      displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户'),
+      loading: false,
+      error: ''
+    }, ready);
+  },
   onShow() {
     this.refresh();
   },
@@ -22,8 +36,13 @@ Page({
       });
       return Promise.resolve();
     }
+    const cached = api.cachedUser();
+    if (cached) {
+      const phone = cached.phone || '';
+      this.setData({ user: cached, displayName: cached.nickname || (phone ? phone.slice(-4) : '德澳用户') });
+    }
     this.setData({
-      loading: true,
+      loading: !cached,
       error: ''
     });
     return api.profile().then(user => {
@@ -31,9 +50,9 @@ Page({
       const phone = user.phone || '';
       this.setData({
         user,
-        displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户')
+        displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户'),
+        loading: false
       });
-      this.setData({ loading: false });
     }).catch(e => {
       if (run !== this._refreshId) return;
       this.setData({

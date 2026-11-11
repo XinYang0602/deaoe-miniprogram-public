@@ -92,8 +92,23 @@ function login() {
   })
 }
 
+function cachedUser() {
+  return hasSession() ? saved().user : null
+}
+
+function userRequest(path, method = 'GET', data) {
+  const token = hasSession() ? saved().token : null;
+  return call(path, method, data).then(r => {
+    if (token && hasSession() && saved().token === token) {
+      session = { ...saved(), user: r.user };
+      wx.setStorageSync(KEY, session);
+    }
+    return r.user
+  })
+}
+
 function profile() {
-  return call('/me').then(r => r.user)
+  return userRequest('/me')
 }
 
 function logout() {
@@ -135,18 +150,19 @@ function submit(input) {
 }
 
 function saveAvatar(avatar) {
-  return call('/avatar', 'POST', {
+  return userRequest('/avatar', 'POST', {
     avatar
-  }).then(r => r.user)
+  })
 }
 
 function bindPhone(code) {
-  return call('/phone', 'POST', {
+  return userRequest('/phone', 'POST', {
     code,
     agreed: true
-  }).then(r => r.user)
+  })
 }
 module.exports = {
+  cachedUser,
   bindPhone,
   saveAvatar,
   hasSession,

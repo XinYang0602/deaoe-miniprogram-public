@@ -173,7 +173,10 @@
 /* Champagne welcome: one brief, sparse celebration, no continuous animation. */
 .member-welcome-mask {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -216,9 +219,10 @@
 .welcome-dialog-button { width: 100%; margin: 0; padding: 0 20rpx; border-radius: 16rpx; background: linear-gradient(110deg, #9a7a43, #80602e); color: #fffdf7; font-size: 28rpx; font-weight: 500; line-height: 88rpx; }
 .welcome-dialog-button::after { border: none; }
 .welcome-dialog-button-pressed { opacity: .86; }
-.welcome-sparkles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; border-radius: 32rpx; }
+.welcome-sparkles { position: absolute; top: 0; left: 0; width: 100%; height: 260rpx; overflow: hidden; pointer-events: none; border-radius: 32rpx; }
 .welcome-sparkle { position: absolute; width: 5rpx; height: 9rpx; border-radius: 2rpx; background: #c3a15e; opacity: 0; animation: welcome-gold-fall 2.3s ease-out both; }
 .welcome-sparkle:nth-child(3n) { width: 4rpx; height: 4rpx; border-radius: 50%; background: #dfc58d; }
 @keyframes welcome-gold-fall { 0% { opacity: 0; transform: translate3d(-8rpx, -12rpx, 0) rotate(0); } 15% { opacity: .65; } 75% { opacity: .35; } 100% { opacity: 0; transform: translate3d(16rpx, 210rpx, 0) rotate(150deg); } }
 @keyframes welcome-card-enter { from { opacity: 0; transform: translateY(12rpx); } to { opacity: 1; transform: translateY(0); } }
-@media (prefers-reduced-motion: reduce) { .member-welcome-dialog { animation: none; } .welcome-sparkles { display: none; } }
+/* Keep the brief welcome sparkles visible in both motion modes. */
+@media (prefers-reduced-motion: reduce) { .member-welcome-dialog { animation: none; } }

@@ -14,7 +14,7 @@ Page({
     welcomeParticles: Array.from({ length: 12 }, (_, i) => ({
       id: i,
       left: 5 + (i * 29) % 90,
-      delay: (i % 4) * 180,
+      delay: 320 + (i % 4) * 180,
       top: 8 + (i % 3) * 12
     }))
   },
@@ -165,11 +165,18 @@ Page({
     });
   },
   done() {
-    wx.navigateBack({
-      delta: 1,
-      fail: () => wx.switchTab({
-        url: '/pages/my/index'
-      })
+    if (this.data.busy || this._returning) return;
+    this._returning = true;
+    const pages = getCurrentPages();
+    const previous = pages[pages.length - 2];
+    const go = () => wx.switchTab({
+      url: '/pages/my/index',
+      complete: () => { this._returning = false; }
     });
+    if (previous && previous.route === 'pages/my/index' && this.data.user) {
+      previous.preloadUser(this.data.user, go);
+    } else {
+      go();
+    }
   }
 });
