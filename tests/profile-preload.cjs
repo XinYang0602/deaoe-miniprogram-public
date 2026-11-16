@@ -9,7 +9,8 @@ function page(file, context) {
 (async () => {
   let session = true, resolveProfile;
   const user = { id: 'TEST', memberNo: 'DE8000001', phone: '00000001234' };
-  const api = { hasSession: () => session, cachedUser: () => session ? user : null,
+  const api = { hasPreparedWorkbench: () => false,
+    hasSession: () => session, cachedUser: () => session ? user : null,
     profile: () => new Promise(resolve => { resolveProfile = resolve; }) };
   const mine = page('miniprogram/pages/my/index.js', { require: () => api, wx: {} });
   mine.onLoad();

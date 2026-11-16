@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-16 · Workbench startup
+
+- Prepare employee workbench entry in the background on app open.
+- Reuse in-flight profile requests and consume each session-bound launch once.
+
 ## 2026-11-16 · Member workbench
 
 - Open the role-scoped staff workbench from a linked member profile.

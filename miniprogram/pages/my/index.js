@@ -28,7 +28,7 @@ Page({
   refresh() {
     const run = (this._refreshId || 0) + 1;
     this._refreshId = run;
-    this.setData({ staffAccess: false });
+    this.setData({ staffAccess: api.hasPreparedWorkbench() });
     if (!api.hasSession()) {
       this.setData({
         user: null,
@@ -60,6 +60,7 @@ Page({
       if (run !== this._refreshId) return;
       this.setData({
         error: e.message,
+        staffAccess: false,
         loading: false,
         ...(!api.hasSession() ? {
           user: null,

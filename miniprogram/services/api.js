@@ -1,6 +1,8 @@
 const config = require('../config');
 const KEY = 'deaoe-mini-session-v1';
 let session = null;
+let preparedEntry = null;
+let profileRequest = null;
 
 function saved() {
   if (session) return session;
@@ -11,6 +13,8 @@ function saved() {
 }
 
 function clear() {
+  preparedEntry = null;
+  profileRequest = null;
   session = null;
   wx.removeStorageSync(KEY)
 }
@@ -57,7 +61,7 @@ function call(path, method = 'GET', data, auth = true) {
           resolve(res.data);
           return
         }
-        if (res.statusCode === 401) clear();
+        if (res.statusCode === 401 && auth && saved() && header.Authorization === 'Bearer ' + saved().token) clear();
         const e = new Error(res.data && res.data.error || '服务请求失败，请稍后重试');
         e.code = res.statusCode;
         reject(e)
@@ -108,7 +112,44 @@ function userRequest(path, method = 'GET', data) {
 }
 
 function profile() {
-  return userRequest('/me')
+  const token = hasSession() && saved().token;
+  if (profileRequest && profileRequest.token === token) return profileRequest.pending;
+  const request = { token };
+  profileRequest = request;
+  request.pending = userRequest('/me').then(user => {
+    if (!token || !hasSession() || saved().token !== token) throw new Error('当前登录已变更');
+    if (user.staffWorkbench === true) {
+      prepareEntry().pending.catch(() => {});
+    } else {
+      preparedEntry = null;
+    }
+    return user;
+  }).finally(() => {
+    if (profileRequest === request) profileRequest = null;
+  });
+  return request.pending;
+}
+
+function prepareEntry() {
+  const token = hasSession() && saved().token;
+  if (preparedEntry && preparedEntry.token === token && Date.now() < preparedEntry.until) return preparedEntry;
+  // Leave time for the browser to complete its one-time challenge.
+  const entry = { token, until: Date.now() + 85000 };
+  preparedEntry = entry;
+  entry.pending = call('/staff-launch', 'POST', {}).then(result => {
+    if (!token || !hasSession() || saved().token !== token) throw new Error('当前登录已变更');
+    return result;
+  }).catch(error => {
+    if (preparedEntry === entry) preparedEntry = null;
+    throw error;
+  });
+  return entry;
+}
+
+function launchWorkbench() {
+  const entry = prepareEntry();
+  preparedEntry = null;
+  return entry.pending;
 }
 
 function logout() {
@@ -162,7 +203,8 @@ function bindPhone(code) {
   })
 }
 module.exports = {
-  launchWorkbench: () => call('/staff-launch', 'POST', {}),
+  hasPreparedWorkbench: () => !!(preparedEntry && hasSession() && preparedEntry.token === saved().token && Date.now() < preparedEntry.until),
+  launchWorkbench,
   approveWorkbench: (launch, challenge) => call('/staff-approve', 'POST', { launch, challenge }),
   cachedUser,
   bindPhone,
