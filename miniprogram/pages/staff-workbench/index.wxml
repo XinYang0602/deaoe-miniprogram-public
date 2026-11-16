@@ -1,1 +1,1 @@
-<web-view wx:if="{{url}}" src="{{url}}" binderror="loadError" /><view wx:else class="staff-status">{{message}}</view>
+<web-view wx:if="{{url}}" src="{{url}}" bindload="onWebLoad" binderror="loadError" /><view wx:else class="staff-status">{{message}}</view>

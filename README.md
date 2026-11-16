@@ -75,3 +75,4 @@ DEAOE logos and mascot assets are included to document the original interface. N
 
 - Open the role-scoped staff workbench from a linked member profile.
 - Prepare employee workbench entry in the background on app open.
+- Reuse verified staff sessions and confirm entry on the current page.
