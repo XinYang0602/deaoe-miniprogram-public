@@ -44,13 +44,15 @@
       wx:if="{{error}}"
       class="error"
     >{{error}}<text class="retry" bindtap="refresh">重新加载</text></view>
+    <button wx:if="{{staffAccess}}" class="staff-entry" bindtap="openWorkbench"
+      hover-class="staff-entry-pressed" aria-label="进入员工工作台">
+      <text>员工工作台</text>
+      <text class="staff-entry-action">进入 ›</text>
+    </button>
     <view class="section-head"><text>账号与帮助</text></view>
     <view class="account-panel">
       <button bindtap="openLogin">
         <image src="/assets/ui/user.png" /><text>{{user ? '修改头像' : '登录/注册'}}</text><text class="arrow">›</text>
-      </button>
-      <button wx:if="{{staffAccess}}" bindtap="openWorkbench">
-        <image src="/assets/ui/tool.png" /><text>员工工作台</text><text class="arrow">›</text>
       </button>
       <button bindtap="binding">
         <image src="/assets/ui/card.png" /><text>设备登记与保修指引</text><text class="arrow">›</text>

@@ -1,5 +1,7 @@
 # Changelog
 
+## 2026-11-16 · Give linked employees a dedicated workbench button below their membership card.
+
 ## 2026-11-16 · Reuse verified staff sessions and confirm entry on the current page.
 
 ## 2026-11-16 · Workbench startup

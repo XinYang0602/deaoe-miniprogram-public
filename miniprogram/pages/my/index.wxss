@@ -428,3 +428,30 @@
   text-shadow: 0 1rpx 0 #ffffffcc;
   word-break: break-all;
 }
+
+.mine-page .staff-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-height: 108rpx;
+  margin: 24rpx 0;
+  padding: 20rpx 30rpx;
+  border-radius: 20rpx;
+  background: #ad3933;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.staff-entry-action {
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.mine-page .staff-entry-pressed {
+  background: #902e29;
+}
