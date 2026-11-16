@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-16 · Member workbench
+
+- Open the role-scoped staff workbench from a linked member profile.
+- Browser entry uses a short-lived challenge approved by the active native session. Linked sessions recheck membership and employee permissions.
+
+
 ## 2026-11-11
 
 - Removed repeated agreement UI after successful login while retaining pre-login consent and native phone authorization. All four regression suites passed.

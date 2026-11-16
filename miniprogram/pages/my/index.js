@@ -2,6 +2,7 @@ const api = require('../../services/api');
 Page({
   data: {
     user: null,
+    staffAccess: false,
     loading: false,
     logging: false,
     error: '',
@@ -27,6 +28,7 @@ Page({
   refresh() {
     const run = (this._refreshId || 0) + 1;
     this._refreshId = run;
+    this.setData({ staffAccess: false });
     if (!api.hasSession()) {
       this.setData({
         user: null,
@@ -50,6 +52,7 @@ Page({
       const phone = user.phone || '';
       this.setData({
         user,
+        staffAccess: user.staffWorkbench === true,
         displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户'),
         loading: false
       });
@@ -64,6 +67,10 @@ Page({
         } : {})
       });
     });
+  },
+  openWorkbench() {
+    if (!this.data.staffAccess) return;
+    wx.navigateTo({ url: '/pages/staff-workbench/index' });
   },
   openLogin() {
     wx.navigateTo({

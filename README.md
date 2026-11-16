@@ -70,3 +70,7 @@ DEAOE logos and mascot assets are included to document the original interface. N
 - The brief welcome sparkles play once in both system motion modes; card entry animation is disabled with reduced motion.
 
 - Removed the duplicate agreement checkbox from post-login avatar setup.
+
+### 2026-11-16
+
+- Open the role-scoped staff workbench from a linked member profile.

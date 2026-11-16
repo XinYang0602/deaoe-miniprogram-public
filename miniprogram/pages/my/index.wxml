@@ -49,6 +49,9 @@
       <button bindtap="openLogin">
         <image src="/assets/ui/user.png" /><text>{{user ? '修改头像' : '登录/注册'}}</text><text class="arrow">›</text>
       </button>
+      <button wx:if="{{staffAccess}}" bindtap="openWorkbench">
+        <image src="/assets/ui/tool.png" /><text>员工工作台</text><text class="arrow">›</text>
+      </button>
       <button bindtap="binding">
         <image src="/assets/ui/card.png" /><text>设备登记与保修指引</text><text class="arrow">›</text>
       </button>

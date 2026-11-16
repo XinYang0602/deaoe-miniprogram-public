@@ -162,6 +162,8 @@ function bindPhone(code) {
   })
 }
 module.exports = {
+  launchWorkbench: () => call('/staff-launch', 'POST', {}),
+  approveWorkbench: (launch, challenge) => call('/staff-approve', 'POST', { launch, challenge }),
   cachedUser,
   bindPhone,
   saveAvatar,

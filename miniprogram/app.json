@@ -9,7 +9,9 @@
     "pages/privacy/index",
     "pages/my/index",
     "pages/login/index",
-    "pages/website/index"
+    "pages/website/index",
+    "pages/staff-workbench/index",
+    "pages/staff-confirm/index"
   ],
   "window": {
     "navigationBarTitleText": "德澳服务",
