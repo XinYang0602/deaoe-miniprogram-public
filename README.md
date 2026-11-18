@@ -85,3 +85,5 @@ DEAOE logos and mascot assets are included to document the original interface. N
 - 2026-11-17 · Refine login hierarchy with a larger phone sign-in button and a quiet text alternative.
 
 - 2026-11-17 · Remove the guest welcome heading and agreement reminder from the login page.
+
+- 2026-11-17 · Add an employee-only preference to open the workbench on app launch.

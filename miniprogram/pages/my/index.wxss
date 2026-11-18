@@ -455,3 +455,7 @@
 .mine-page .staff-entry-pressed {
   background: #902e29;
 }
+
+.staff-auto { margin: -8rpx 0 28rpx; color: #737d88; font-size: 24rpx; line-height: 1.6; }
+.staff-auto label { display: flex; align-items: center; min-height: 72rpx; }
+.staff-auto checkbox { flex: none; transform: scale(.72); }

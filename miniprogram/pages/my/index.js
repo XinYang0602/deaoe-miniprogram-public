@@ -3,6 +3,7 @@ Page({
   data: {
     user: null,
     staffAccess: false,
+    autoWorkbench: false,
     loading: false,
     logging: false,
     error: '',
@@ -17,6 +18,7 @@ Page({
     const phone = user.phone || '';
     this.setData({
       user,
+      autoWorkbench: wx.getStorageSync('workbench-auto-' + user.id) === true,
       displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户'),
       loading: false,
       error: ''
@@ -52,6 +54,7 @@ Page({
       const phone = user.phone || '';
       this.setData({
         user,
+        autoWorkbench: wx.getStorageSync('workbench-auto-' + user.id) === true,
         staffAccess: user.staffWorkbench === true,
         displayName: user.nickname || (phone ? phone.slice(-4) : '德澳用户'),
         loading: false
@@ -68,6 +71,12 @@ Page({
         } : {})
       });
     });
+  },
+  changeAutoWorkbench(event) {
+    if (!this.data.staffAccess || !this.data.user) return;
+    const enabled = event.detail.value.includes('auto');
+    wx.setStorageSync('workbench-auto-' + this.data.user.id, enabled);
+    this.setData({ autoWorkbench: enabled });
   },
   openWorkbench() {
     if (!this.data.staffAccess) return;

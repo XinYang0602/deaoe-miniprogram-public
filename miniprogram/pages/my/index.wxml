@@ -47,8 +47,11 @@
     <button wx:if="{{staffAccess}}" class="staff-entry" bindtap="openWorkbench"
       hover-class="staff-entry-pressed" aria-label="进入员工工作台">
       <text>员工工作台</text>
-      <text class="staff-entry-action">进入 ›</text>
+      <text class="staff-entry-action">›</text>
     </button>
+    <checkbox-group wx:if="{{staffAccess}}" class="staff-auto" bindchange="changeAutoWorkbench">
+      <label><checkbox value="auto" checked="{{autoWorkbench}}" color="#c84039" />以后打开小程序直接进入工作台</label>
+    </checkbox-group>
     <view class="section-head"><text>账号与帮助</text></view>
     <view class="account-panel">
       <button bindtap="openLogin">
