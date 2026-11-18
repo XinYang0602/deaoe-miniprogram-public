@@ -81,3 +81,5 @@ DEAOE logos and mascot assets are included to document the original interface. N
 ### 2026-11-17
 
 - Emphasize phone sign-in and explain its purpose with a consent reminder.
+
+- 2026-11-17 · Refine login hierarchy with a larger phone sign-in button and a quiet text alternative.

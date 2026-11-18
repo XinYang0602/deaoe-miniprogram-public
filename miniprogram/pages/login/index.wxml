@@ -27,14 +27,8 @@
       disabled="{{busy}}"
       bindtap="phoneConsent"
     >手机号快捷登录</button>
-    <view class="phone-purpose">用于绑定会员联系方式、确认安装维修预约</view>
-    <view class="phone-suggestion">建议勾选下方协议，使用手机号快捷登录</view>
-    <button
-      class="secondary other-login"
-      bindtap="login"
-      loading="{{busy}}"
-      disabled="{{busy}}"
-    >登录/注册</button>
+    <view class="phone-purpose">用于联系安装维修、提供设备售后服务</view>
+    <view class="phone-suggestion">建议阅读并勾选协议后登录</view>
     <view class="agreement-row">
       <checkbox-group
         bindchange="agree"
@@ -53,6 +47,12 @@
         我已阅读并同意<text class="agreement-link" bindtap="privacy" data-doc="service">《用户服务协议》</text>、<text class="agreement-link" bindtap="privacy" data-doc="privacy">《隐私保护说明》</text>和<text class="agreement-link" bindtap="privacy" data-doc="sharing">《第三方信息共享说明》</text>
       </view>
     </view>
+    <button
+      class="secondary other-login"
+      bindtap="login"
+      loading="{{busy}}"
+      disabled="{{busy}}"
+    >登录/注册</button>
   </view>
   <view
     wx:else

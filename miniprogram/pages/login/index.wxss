@@ -230,10 +230,10 @@
 /* Guest sign-in emphasis follows the existing brand colors. */
 .login-page .guest-login .phone-primary {
   margin-top: 42rpx;
-  min-height: 100rpx;
+  min-height: 116rpx;
   line-height: 1.5;
-  padding: 28rpx 24rpx;
-  font-size: 32rpx;
+  padding: 32rpx 24rpx;
+  font-size: 36rpx;
   font-weight: 600;
   box-shadow: 0 8rpx 20rpx rgba(200, 64, 57, .16);
 }
@@ -264,3 +264,24 @@
 .login-page .guest-login .other-login {
   margin-top: 30rpx;
 }
+
+.guest-login .welcome { font-size: 34rpx; line-height: 1.5; }
+.guest-login .subtitle { font-size: 25rpx; color: #727c87; margin-top: 14rpx; }
+.guest-login .phone-purpose { font-size: 24rpx; margin-top: 22rpx; color: #68737e; }
+.guest-login .phone-suggestion { font-size: 23rpx; margin-top: 8rpx; color: #8a6260; }
+.guest-login .agreement-row { margin-top: 26rpx; gap: 6rpx; }
+.guest-login .agreement-copy { font-size: 23rpx; line-height: 1.8; color: #727c87; }
+.guest-login .agreement-link { display: inline-block; }
+.login-page .guest-login .other-login {
+  width: auto;
+  min-width: 160rpx;
+  min-height: 88rpx;
+  margin: 24rpx auto 0;
+  padding: 22rpx 24rpx;
+  border: 0;
+  background: transparent;
+  color: #737b84;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+.login-page .guest-login .other-login::after { border: 0; }

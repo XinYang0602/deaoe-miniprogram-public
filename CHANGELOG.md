@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-11-17 · Refine login hierarchy with a larger phone sign-in button and a quiet text alternative.
+
+
 ## 2026-11-17 · Emphasize phone sign-in and explain its purpose with a consent reminder.
 
 The guest login button uses stronger type and spacing. Copy explains member contact and service appointment uses. Consent stays user-selected. Validated with basic checks and JavaScript syntax checks.
