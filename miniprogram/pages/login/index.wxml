@@ -9,7 +9,6 @@
     </view><text>好产品，长久相伴。</text>
   </view>
   <view wx:if="{{!user}}" class="guest-login">
-    <view class="welcome">欢迎使用德澳服务</view>
     <view class="subtitle">登录后查看设备、保修卡与服务进度</view>
     <button
       wx:if="{{agreed}}"
@@ -28,7 +27,6 @@
       bindtap="phoneConsent"
     >手机号快捷登录</button>
     <view class="phone-purpose">用于联系安装维修、提供设备售后服务</view>
-    <view class="phone-suggestion">建议阅读并勾选协议后登录</view>
     <view class="agreement-row">
       <checkbox-group
         bindchange="agree"

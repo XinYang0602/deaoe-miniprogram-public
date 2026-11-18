@@ -246,8 +246,7 @@
   color: #fff;
   box-shadow: none;
 }
-.phone-purpose,
-.phone-suggestion {
+.phone-purpose {
   text-align: center;
   font-size: 24rpx;
   line-height: 1.7;
@@ -257,18 +256,12 @@
   margin-top: 20rpx;
   color: #626d79;
 }
-.phone-suggestion {
-  margin-top: 6rpx;
-  color: #a3413b;
-}
 .login-page .guest-login .other-login {
   margin-top: 30rpx;
 }
 
-.guest-login .welcome { font-size: 34rpx; line-height: 1.5; }
-.guest-login .subtitle { font-size: 25rpx; color: #727c87; margin-top: 14rpx; }
+.guest-login .subtitle { font-size: 25rpx; color: #727c87; margin-top: 0; }
 .guest-login .phone-purpose { font-size: 24rpx; margin-top: 22rpx; color: #68737e; }
-.guest-login .phone-suggestion { font-size: 23rpx; margin-top: 8rpx; color: #8a6260; }
 .guest-login .agreement-row { margin-top: 26rpx; gap: 6rpx; }
 .guest-login .agreement-copy { font-size: 23rpx; line-height: 1.8; color: #727c87; }
 .guest-login .agreement-link { display: inline-block; }
