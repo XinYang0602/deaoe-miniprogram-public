@@ -77,3 +77,7 @@ DEAOE logos and mascot assets are included to document the original interface. N
 - Prepare employee workbench entry in the background on app open.
 - Reuse verified staff sessions and confirm entry on the current page.
 - Give linked employees a dedicated workbench button below their membership card.
+
+### 2026-11-17
+
+- Emphasize phone sign-in and explain its purpose with a consent reminder.

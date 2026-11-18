@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-17 · Emphasize phone sign-in and explain its purpose with a consent reminder.
+
+The guest login button uses stronger type and spacing. Copy explains member contact and service appointment uses. Consent stays user-selected. Validated with basic checks and JavaScript syntax checks.
+
 ## 2026-11-16 · Give linked employees a dedicated workbench button below their membership card.
 
 ## 2026-11-16 · Reuse verified staff sessions and confirm entry on the current page.

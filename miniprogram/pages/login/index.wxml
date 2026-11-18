@@ -8,12 +8,13 @@
       />
     </view><text>好产品，长久相伴。</text>
   </view>
-  <view wx:if="{{!user}}">
+  <view wx:if="{{!user}}" class="guest-login">
     <view class="welcome">欢迎使用德澳服务</view>
     <view class="subtitle">登录后查看设备、保修卡与服务进度</view>
     <button
       wx:if="{{agreed}}"
-      class="main"
+      class="main phone-primary"
+      hover-class="phone-primary-pressed"
       open-type="getPhoneNumber"
       bindgetphonenumber="phone"
       loading="{{busy}}"
@@ -21,11 +22,15 @@
     >手机号快捷登录</button>
     <button
       wx:else
-      class="main"
+      class="main phone-primary"
+      hover-class="phone-primary-pressed"
+      disabled="{{busy}}"
       bindtap="phoneConsent"
     >手机号快捷登录</button>
+    <view class="phone-purpose">用于绑定会员联系方式、确认安装维修预约</view>
+    <view class="phone-suggestion">建议勾选下方协议，使用手机号快捷登录</view>
     <button
-      class="secondary"
+      class="secondary other-login"
       bindtap="login"
       loading="{{busy}}"
       disabled="{{busy}}"
